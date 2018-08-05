@@ -1,0 +1,25 @@
+{
+  "name": "beeminder-advanced-parser",
+  "version": "1.0.0",
+  "description": "flexibly parse \"advanced entry\" data",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanjonas/beeminder-advanced-parser.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanjonas/beeminder-advanced-parser/issues"
+  },
+  "homepage": "https://github.com/ivanjonas/beeminder-advanced-parser#readme",
+  "dependencies": {
+    "tape": "^4.9.1"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1"
+  }
+}
