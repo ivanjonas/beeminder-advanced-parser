@@ -11,3 +11,18 @@ tape.test('existing format', function(t) {
   t.equal(transform(multiline), multiline, 'multi-line entry')
   t.end()
 })
+
+tape.test('caret', function(t) {
+  const today = new Date()
+  const yesterday = new Date()
+  const twentyDaysAgo = new Date()
+  yesterday.setDate(today.getDate() - 1)
+  twentyDaysAgo.setDate(today.getDate() - 20)
+
+  t.equal(transform('^ 20'), today.getDate() + ' 20', 'today')
+  t.equal(transform('^^ 21'), yesterday.getDate() + ' 21', 'yesterday')
+
+  // twenty-one carats representing twenty days ago
+  t.equal(transform('^^^^^^^^^^^^^^^^^^^^^ 22'), twentyDaysAgo.getDate() + ' 22', 'twenty days ago')
+  t.end()
+})
